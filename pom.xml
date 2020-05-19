@@ -10,6 +10,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>13</java.version>
+		<spring.framework>5.2.6.RELEASE</spring.framework>
+		<spring.web>5.2.6.RELEASE</spring.web>
 	</properties>
 
 	<!-- ビルド定義 -->
@@ -34,6 +36,7 @@
 		</testResources>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<release>13</release>
@@ -45,7 +48,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.1.2</version>
 				<executions>
 					<execution>
 						<id>copy-dependencies</id>
@@ -65,7 +68,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
+				<version>3.2.0</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -85,6 +88,27 @@
 		<!-- ========================================================== -->
 		<!-- ===== 共通 ===== -->
 		<!-- ========================================================== -->
+		<!-- RestTemplate(SpringFramework) -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.framework}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.framework}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.web}</version>
+		</dependency>
 
 		<!-- ロギング(SLF4j + Logback) -->
 		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
