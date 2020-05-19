@@ -1,0 +1,15 @@
+{
+    "header": {
+        "X-Application-Id": "56c41a588a286f37037fa967",
+        "X-Application-Key": "N3wPV3tEoqkm4UITT2p61v8HPom59te6RfuahPU6",
+        "Content-Type": "application/json"
+    },
+    "body": {
+        "query": {},
+        "message": "お知らせ",
+        "allowedReceivers": [
+            "000011112222",
+            "000011113333"
+        ]
+    }
+}

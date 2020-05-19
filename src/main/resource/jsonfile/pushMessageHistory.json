@@ -1,0 +1,21 @@
+{
+    "header": {
+        "X-Application-Id": "56c41a588a286f37037fa967",
+        "X-Application-Key": "N3wPV3tEoqkm4UITT2p61v8HPom59te6RfuahPU6",
+        "Content-Type": "application/json"
+    },
+    "body": {
+        "username": "56c437298a286f37037fa980",
+        "message": [
+        "猫背率が高いです",
+        "目標歩数に達成しました"
+        ],
+        "ACL": {
+            "c": null,
+            "d": null,
+            "owner": "56c437298a286f37037fa980",
+            "r": "56c437298a286f37037fa980",
+            "w": null
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+	"dstmac":"FFFFFFFFFFFF",
+	"srcmac":"0A554F4E6D41",
+	"type"	:"0806",
+	"arp":{
+		"hwtype"	:"0001",
+		"prottype"	:"0800",
+		"hwlength"	:"06",
+		"protlength":"04",
+		"operation"	:"0001",
+		"srcmac"	:"0A554F4E6D41",
+		"srcaddr"	:"C0000001",
+		"dstmac"	:"000000000000",
+		"dstaddr"	:"C0000002"
+	},
+	"ip":{
+	}
+}
