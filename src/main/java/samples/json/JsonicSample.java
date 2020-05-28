@@ -1,4 +1,4 @@
-package samples;
+package samples.json;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -21,8 +21,8 @@ import net.arnx.jsonic.JSON;
  *
  */
 @SuppressWarnings("unused")
-public class JsonSample implements IActor {
-	static Logger log = LoggerFactory.getLogger(JsonSample.class);
+public class JsonicSample implements IActor {
+	static Logger log = LoggerFactory.getLogger(JsonicSample.class);
 
 	static String jsonfileDir = System.getProperty("user.dir") + "/src/main/resource/jsonfile";
 
@@ -34,7 +34,7 @@ public class JsonSample implements IActor {
 	// ヘッダ追加とボディに入れ子の項目を追加
 	public static final String JSON_SAMPLE02 = "{" + "\"httpquery\":{" + "\"username\":\"test\"," + "\"email\":\"test@example.com\"" + "}," + "\"httpheader\":{" + "\"X-Application-Id\":\"12345\"," + "\"X-Application-Key\":\"67890\"," + "\"Content-Type\": \"application/json\"" + "}," + "\"httpbody\":{" + "\"query\":{\"channels\":[\"chan1\",\"chan2\"]}," + "\"message\":\"test message\"," + "\"allowedReceivers\": [ \"g:admin\",\"g:localuser\" ]" + "}" + "}";
 
-	public static final String JSON_SAMPLE03 = "{\"currentTime\":\"2016-03-07T11:12:13.000Z\",\"results\":[{\"_id\":\"56d67c508a286f3eb0554a43\",\"message\":\"Googleへ誘導します\",\"url\":\"http://www.google.co.jp/\",\"title\":\"グンゼスポーツよりお知らせ(テスト)\",\"badge\":0,\"sound\":\"\",\"content-available\":0,\"category\":\"\",\"ACL\":{\"r\":[\"g:authenticated\"],\"w\":[\"g:authenticated\"],\"c\":[],\"u\":[],\"d\":[],\"admin\":[]},\"createdAt\":\"2016-03-02T05:38:24.791Z\",\"updatedAt\":\"2016-03-02T05:38:24.791Z\",\"etag\":\"0a26ce9c-6f42-492d-afd2-07829dea832b\"}]}";
+	public static final String JSON_SAMPLE03 = "{\"currentTime\":\"2016-03-07T11:12:13.000Z\",\"results\":[{\"_id\":\"56d67c508a286f3eb0554a43\",\"message\":\"Googleへ誘導します\",\"url\":\"http://www.google.co.jp/\",\"title\":\"お知らせ(テスト)\",\"badge\":0,\"sound\":\"\",\"content-available\":0,\"category\":\"\",\"ACL\":{\"r\":[\"g:authenticated\"],\"w\":[\"g:authenticated\"],\"c\":[],\"u\":[],\"d\":[],\"admin\":[]},\"createdAt\":\"2016-03-02T05:38:24.791Z\",\"updatedAt\":\"2016-03-02T05:38:24.791Z\",\"etag\":\"0a26ce9c-6f42-492d-afd2-07829dea832b\"}]}";
 	public static final String JSON_SAMPLE04 = "{\"body\":" + JSON_SAMPLE03 + "}";
 
 	@Override
