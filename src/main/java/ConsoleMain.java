@@ -33,9 +33,9 @@ public class ConsoleMain {
 		// actor.add(new ClassLoaderSample());
 
 		// JSON練習
-		actor.add(new JsonicSample());
-		actor.add(new JacksonSample());
-		actor.add(new GsonSample());
+		// actor.add(new JsonicSample());
+		// actor.add(new JacksonSample());
+		// actor.add(new GsonSample());
 
 		// ハッシュチェック
 		// actor.add(new CreatePasswordSample());

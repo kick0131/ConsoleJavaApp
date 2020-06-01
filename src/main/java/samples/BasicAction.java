@@ -1,7 +1,9 @@
 package samples;
 
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.AbstractMap.SimpleEntry;
@@ -36,7 +38,7 @@ public class BasicAction implements IActor {
 
 	@Override
 	public void action() throws Exception {
-		BasicSample07();
+		BasicSample08();
 
 	}
 
@@ -291,6 +293,37 @@ public class BasicAction implements IActor {
 			System.out.println("encode  :" + encStr);
 			System.out.println("decode  :" + decStr);
 		});
+	}
+
+	/**
+	 * Byteクラス(java.lang.Byte)
+	 */
+	public static void BasicSample08() {
+		Byte out;
+		// String - Byte
+		// Byte out = new Byte("サンプル１"); // 非推奨
+		// log.info(String.format("[String-Byte] %s", out.toString()));
+
+		// out = Byte.valueOf("サンプル２");
+		// log.info(String.format("[String-Byte] %s", out.toString()));
+
+		// byte - Byte
+		byte[] javabyte = {0x61, 0x62, 0x63, 0x64 , 0x65 };
+		out = Byte.valueOf(javabyte[0]);
+		log.info(String.format("[byte-Byte] %s", out.toString()));
+
+		// Integer - Byte
+		out = Byte.parseByte(Integer.valueOf(0x61).toString());
+		log.info(String.format("[byte-Byte] %d", out.intValue()));
+
+		// 領域確保
+		ByteBuffer bb = ByteBuffer.allocate(1024);
+		bb.put("サンプル１".getBytes(StandardCharsets.UTF_8));
+		// ポインタを初期位置に移動
+		bb.flip();
+		out = Byte.valueOf(bb.get());
+		log.info(String.format("[ByteBuffer] %d", out.intValue()));
+		
 	}
 
 }
