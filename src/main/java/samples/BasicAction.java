@@ -312,6 +312,12 @@ public class BasicAction implements IActor {
 		out = Byte.valueOf(javabyte[0]);
 		log.info(String.format("[byte-Byte] %s", out.toString()));
 
+		// byte after allocate
+		javabyte = "サンプル１".getBytes(StandardCharsets.UTF_8);
+		for(byte item :javabyte){
+			log.info(String.format("[byte-Byte] %d", item));
+		}
+
 		// Integer - Byte
 		out = Byte.parseByte(Integer.valueOf(0x61).toString());
 		log.info(String.format("[byte-Byte] %d", out.intValue()));
